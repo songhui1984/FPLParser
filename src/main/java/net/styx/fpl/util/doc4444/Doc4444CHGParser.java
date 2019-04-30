@@ -24,26 +24,10 @@ public class Doc4444CHGParser implements Doc4444Parser
         msg = msg.substring(4);
         int len = msg.length();
 
-        //System.out.println("########## len : " + len);
         msg = msg.substring(0, len-1);
-        //System.out.println("##### " + msg);
-
         String[] str = msg.trim().split("-");
-
         len = str.length;
-
-        //System.out.println("############# " + len);
-
-        /*
-        for(int i=0; i<len; i++)
-        {
-            System.out.println(i + ": " + str[i]);
-        }
-        */
-
         StringBuilder sb = new StringBuilder();
-
-        //for(int i=4; i<str.length; i++) sb.append(str[i]);
 
         map = Doc4444.type7(str[1], map);
         map = Doc4444.type13(str[2], map);
@@ -73,9 +57,6 @@ public class Doc4444CHGParser implements Doc4444Parser
             else if(itemNo.equalsIgnoreCase("10")) map = Doc4444.type10(item, map);
             
         }
-
-        //map = Doc4444.type18(sb.toString(), map);
-
         return map;
     }
 }

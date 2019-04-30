@@ -10,14 +10,11 @@ import net.styx.fpl.util.doc4444.*;
 public class FPLParser
 {
     private Logger log = Logger.getLogger(FPLParser.class);
-    //private String[] TYPES = {"(ALR", "(RCF", "(FPL", "(CHG", "(CNL", "(DLA", "(DEP", "(ARR", "(CPL", "(EST", "(CDN", "(ACP", "(LAM", "(RQP", "(RQS", "(SPL"};
-    //private List<String> TYPES_PREFIX;
     private String regex = "^\\((ALR|RCF|FPL|CHG|CNL|DLA|DEP|ARR|CPL|EST|CDN|ACP|LAM|RQP|RQS|SPL).*\\)$";
     private Pattern pattern = null;
 
     public FPLParser()
     {
-        //TYPES_PREFIX = Arrays.asList(TYPES);
         pattern = Pattern.compile(regex);
     }
 
@@ -82,15 +79,7 @@ public class FPLParser
 
         Matcher matcher = pattern.matcher(fpl);
 
-		if(matcher.find())
-		{
-		    //System.out.println("Matched .. ");
-		    return true;
-		}
-		else
-		{
-		    //System.out.println("Not Matched .. ");
-		    return false;
-		}
+        if(matcher.find()) return true;
+        else return false;
     }
 }

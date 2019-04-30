@@ -64,8 +64,6 @@ public class Utils
         d[2] = diameter;
 
         return d;
-        //return new Coord(lat, lon, diameter);
-
 	}
 
 	public static double convert(String str)
@@ -108,9 +106,7 @@ public class Utils
 
 		    return d;
 		}
-
 		return -1;
-
 	}
 
 	public static double convert(String s1, String s2, String s3)

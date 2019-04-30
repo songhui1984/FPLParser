@@ -7,22 +7,13 @@ import org.apache.log4j.Logger;
 
 public class Doc4444
 {
-    //private static Doc4444Parser alrParser = new Doc4444ALRParser();
-    //private static Doc4444Parser rcfParser = new Doc4444RCFParser();
     private static Doc4444Parser fplParser = new Doc4444FPLParser();
     private static Doc4444Parser chgParser = new Doc4444CHGParser();
     private static Doc4444Parser dlaParser = new Doc4444DLAParser();
     private static Doc4444Parser depParser = new Doc4444DEPParser();
     private static Doc4444Parser cnlParser = new Doc4444CNLParser();
     private static Doc4444Parser arrParser = new Doc4444ARRParser();
-    //private static Doc4444Parser cplParser = new Doc4444CPLParser();
     private static Doc4444Parser estParser = new Doc4444ESTParser();
-    //private static Doc4444Parser cdnParser = new Doc4444CDNParser();
-    //private static Doc4444Parser acpParser = new Doc4444ACPParser();
-    //private static Doc4444Parser lamParser = new Doc4444LAMParser();
-    //private static Doc4444Parser rqpParser = new Doc4444RQPParser();
-    //private static Doc4444Parser rqsParser = new Doc4444RQSParser();
-    //private static Doc4444Parser splParser = new Doc4444SPLParser();
 
     private Doc4444()
     {}
@@ -141,7 +132,6 @@ public class Doc4444
         if(msg == null) return map;
 
         msg = msg.trim().toUpperCase();
-        //msg = msg.substring(1);
 
         String[] str = msg.split("/");
 
@@ -159,7 +149,6 @@ public class Doc4444
         if(msg == null) return map;
 
         msg = msg.trim().toUpperCase();
-        //msg = msg.substring(1);
 
         map.put("DEP", msg.substring(0, 4));
         map.put("EOBT", msg.substring(4));
@@ -231,7 +220,6 @@ public class Doc4444
         if(msg == null) return map;
 
         msg = msg.trim().toUpperCase();
-        //msg = msg.substring(1);
 
         int idx = msg.indexOf(' ');
 
@@ -273,7 +261,6 @@ public class Doc4444
         if(msg == null) return map;
 
         msg = msg.trim().toUpperCase();
-        //msg = msg.substring(1);
 
         map.put("OTHER", msg);
 
@@ -286,7 +273,6 @@ public class Doc4444
         if(msg == null) return map;
 
         msg = msg.trim().toUpperCase();
-        //msg = msg.substring(1);
         String other = map.get("OTHER");
 
         if(other != null) other = other + " " + msg;

@@ -17,7 +17,8 @@ FPLParser only requires maven to build, you can simply type:
 
 ```sh
 $ mvn clean compile
-To package compiled classes to jar file
+
+#To package compiled classes to jar file
 $ mvn package
 ```
 

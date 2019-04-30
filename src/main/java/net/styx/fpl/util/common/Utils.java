@@ -1,4 +1,4 @@
-package com.kac.fpl.util.common;
+package net.styx.fpl.util.common;
 
 import java.io.*;
 import java.awt.font.*;

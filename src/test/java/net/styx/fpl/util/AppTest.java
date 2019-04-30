@@ -1,4 +1,4 @@
-package com.kac.fpl.util;
+package net.styx.fpl.util;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

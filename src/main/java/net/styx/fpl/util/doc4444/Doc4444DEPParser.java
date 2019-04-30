@@ -1,11 +1,11 @@
-package com.kac.fpl.util.doc4444;
+package net.styx.fpl.util.doc4444;
 
 import java.util.*;
 import org.apache.log4j.Logger;
 
-public class Doc4444CNLParser implements Doc4444Parser
+public class Doc4444DEPParser implements Doc4444Parser
 {
-	// (CNL-FIXM03-KEWR0145-VIDP-DOF/160130)
+	// (DEP-TWB251/A4157-RKSI0150-RJCC-DOF/180424)
 	
     public Map<String, String> parse(String msg, String type)
     {
@@ -27,14 +27,12 @@ public class Doc4444CNLParser implements Doc4444Parser
         len = str.length;
 
         //System.out.println("############# " + len);
-
         /*
         for(int i=0; i<len; i++)
         {
             System.out.println(i + ": " + str[i]);
         }
         */
-
         map = Doc4444.type7(str[1], map); // ACID, SSR Mode, SSR Code
         map = Doc4444.type13(str[2], map); // Departure
         map = Doc4444.type16(str[3], map); // Destination

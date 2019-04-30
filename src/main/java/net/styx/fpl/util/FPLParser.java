@@ -1,11 +1,11 @@
-package com.kac.fpl.util;
+package net.styx.fpl.util;
 
 import java.io.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.regex.*;
 import org.apache.log4j.Logger;
-import com.kac.fpl.util.doc4444.*;
+import net.styx.fpl.util.doc4444.*;
 
 public class FPLParser
 {

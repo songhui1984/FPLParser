@@ -1,7 +1,9 @@
 # FPLParser
 
 FPLParser is a Java based Parser that converts the plain text messages which is compliant to ICAO Doc.4444 standard to Java Map<String,String>.
+
 ICAO Doc.4444 is document about 'Procedures for Navigation Services' and defines message formats of following Messages for Flight.
+
   - FPL : Flight Plan
   - DEP : Departure 
   - ARR : Arrival

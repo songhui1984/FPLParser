@@ -27,6 +27,6 @@ $ mvn package
 License
 ----
 
-**Free Software, Please do not change package**
+**Free Software, Please do not change Package Name if possible**
 
 
